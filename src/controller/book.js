@@ -40,7 +40,10 @@ export default {
 
   // 获取章节内容
   async getChapterContent(ctx) {
-    let str = book.chapterContent + `/${ctx.params.link}`;
+    if (!ctx.params.id) {
+      ctx.throw(400, new Error('book link is needed'));
+    }
+    let str = book.chapterContent + `/${ctx.params.id}`;
     console.log(str);
     const chapterContent = await axios.get(str);
     ctx.body = chapterContent.data;
