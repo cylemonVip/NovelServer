@@ -89,6 +89,9 @@ router.get('/book/short-reviews', commentsController.getBookShortReviews)
 // 获取长书评
 router.get('/book/reviews', commentsController.getBookReviews)
 
+// 获取热门书评
+router.get('/book/best-reviews', commentsController.getBookBestReviews)
+
 // 获取书单列表
 router.get('/booklists', BookListController.getLists)
 

@@ -15,5 +15,10 @@ export default {
   async getBookReviews (ctx) {
     const reviews = await axios.get(comment.bookReviews, { params: ctx.query })
     ctx.body = reviews.data
+  },
+
+  async getBookBestReviews (ctx) {
+    const reviews = await axios.get(comment.bestReviews, { params: ctx.query })
+    ctx.body = reviews.data
   }
 }

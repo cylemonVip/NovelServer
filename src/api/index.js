@@ -36,7 +36,9 @@ export const comment = {
   // 短评
   shortReviews: 'http://api.zhuishushenqi.com/post/short-review',
   //长评
-  bookReviews: 'http://api.zhuishushenqi.com/post/review/by-book'
+  bookReviews: 'http://api.zhuishushenqi.com/post/review/by-book',
+  //热门评论
+  bestReviews: 'http://api.zhuishushenqi.com/post/review/best-by-book'
 }
 
 export const bookList = {
