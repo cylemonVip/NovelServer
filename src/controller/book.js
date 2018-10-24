@@ -10,7 +10,9 @@ export default {
 
   // 获取书籍相关推荐
   async getRelatedRecommendedBooks(ctx) {
-    const relatedBooks = await axios.get(book.relatedRecommendedBooks + `/${ctx.params.id}/recommend`)
+    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === 1");
+    const relatedBooks = await axios.get(book.relatedRecommendedBooks + `/${ctx.params.id}/recommend`);
+    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === 2");
     ctx.body = relatedBooks.data
   },
 
