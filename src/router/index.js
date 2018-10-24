@@ -74,6 +74,9 @@ router.get('/search', bookController.getBookSearchResults)
 // 关键字补全
 router.get('/search-auto-complement', bookController.getBookSearchAutoComplement)
 
+//通过热词搜索书籍
+router.get('/search-by-hot-word', bookController.getBookByHotWordSearchResults)
+
 // 通过tag搜索
 router.get('/search-by-tag', bookController.getBookByTagSearchResults)
 

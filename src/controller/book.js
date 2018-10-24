@@ -66,6 +66,12 @@ export default {
     ctx.body = searchResult.data
   },
 
+  // 通过热词搜索书籍
+  async getBookByHotWordSearchResults(ctx) {
+    const searchResult = await axios.get(book.bookSearchByHotWord);
+    ctx.body = searchResult.data
+  },
+
   // 书籍搜索
   async getBookSearchResults(ctx) {
     if (!ctx.query.keyword) {

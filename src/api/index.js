@@ -24,6 +24,8 @@ export const book = {
   bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search', //query ?keyword=关键字
   //通过tag找列表
   bookSearchByTag: 'http://api.zhuishushenqi.com/book/by-tags', //query ?{tags, start, limit}
+  //通过热词找列表
+  bookSearchByHotWord: 'http://api.zhuishushenqi.com/book/hot-word',
   //关键字补全
   bookSearchAutoComplement: 'http://api.zhuishushenqi.com/book/auto-complete' //query ?keyword=关键字
 }
