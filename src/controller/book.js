@@ -12,7 +12,7 @@ export default {
   async getRelatedRecommendedBooks(ctx) {
     console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === 1");
     const relatedBooks = await axios.get(book.relatedRecommendedBooks + `/${ctx.params.id}/recommend`);
-    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === 2");
+    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === relatedBooks.data = " + JSON.stringify(relatedBooks.data));
     ctx.body = relatedBooks.data
   },
 
