@@ -71,6 +71,10 @@ router.get('/chapters/:link', bookController.getChapterContent)
 // 获取搜索结果
 router.get('/search', bookController.getBookSearchResults)
 
+// 通过tag搜索
+router.get('/search-by-tag', bookController.getBookByTagSearchResults)
+
+
 // 获取书籍源
 router.get('/book-sources', bookController.getBookSources)
 

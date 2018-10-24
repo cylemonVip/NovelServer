@@ -10,9 +10,7 @@ export default {
 
   // 获取书籍相关推荐
   async getRelatedRecommendedBooks(ctx) {
-    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === 1");
     const relatedBooks = await axios.get(book.relatedRecommendedBooks + `/${ctx.params.id}/recommend`);
-    console.log("getRelatedRecommendedBooks ===== getRelatedRecommendedBooks === relatedBooks.data = " + JSON.stringify(relatedBooks.data));
     ctx.body = relatedBooks.data
   },
 
@@ -44,6 +42,15 @@ export default {
   async getChapterContent(ctx) {
     const chapterContent = await axios.get(book.chapterContent + `/${ctx.params.link}`)
     ctx.body = chapterContent.data
+  },
+
+  // 通过tag书籍搜索
+  async getBookByTagSearchResults(ctx) {
+    if (!Object.keys(ctx.query).length) {
+      ctx.throw(400, new Error('you must pass some query string: { gender, type, major, minor, start, limit }'))
+    }i
+    const searchResult = await axios.get(book.bookSearchByTag, { params: ctx.query })
+    ctx.body = searchResult.data
   },
 
   // 书籍搜索

@@ -15,7 +15,7 @@ export default {
   },
 
   // 获取分类下的书籍信息
-    async getCategoryInfo (ctx) {
+  async getCategoryInfo (ctx) {
     if (!Object.keys(ctx.query).length) {
       ctx.throw(400, new Error('you must pass some query string: { gender, type, major, minor, start, limit }'))
     }
