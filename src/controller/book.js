@@ -48,7 +48,7 @@ export default {
   async getBookByTagSearchResults(ctx) {
     if (!Object.keys(ctx.query).length) {
       ctx.throw(400, new Error('you must pass some query string: { gender, type, major, minor, start, limit }'))
-    }i
+    }
     const searchResult = await axios.get(book.bookSearchByTag, { params: ctx.query })
     ctx.body = searchResult.data
   },
