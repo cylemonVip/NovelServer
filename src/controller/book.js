@@ -32,16 +32,18 @@ export default {
   // 获取书籍章节
   async getBookChapters(ctx) {
     if (!ctx.params.id) {
-      ctx.throw(400, new Error('book id is needed'))
+      ctx.throw(400, new Error('book id is needed'));
     }
-    const bookChapters = await axios.get(book.bookChapters + `/${ctx.params.id}?view=chapters`)
-    ctx.body = bookChapters.data
+    const bookChapters = await axios.get(book.bookChapters + `/${ctx.params.id}?view=chapters`);
+    ctx.body = bookChapters.data;
   },
 
   // 获取章节内容
   async getChapterContent(ctx) {
-    const chapterContent = await axios.get(book.chapterContent + `/${ctx.params.link}`)
-    ctx.body = chapterContent.data
+    let str = book.chapterContent + `/${ctx.params.link}`;
+    console.log(str);
+    const chapterContent = await axios.get(str);
+    ctx.body = chapterContent.data;
   },
 
   // 通过tag书籍搜索
