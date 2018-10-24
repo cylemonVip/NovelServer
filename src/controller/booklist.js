@@ -10,5 +10,10 @@ export default {
   async getListDetail (ctx) {
     const detail = await axios.get(bookList.detail + `/${ctx.params.id}`)
     ctx.body = detail.data
+  },
+
+  async getListDetailByTagType (ctx) {
+    const detail = await axios.get(bookList.tagDetail)
+    ctx.body = detail.data
   }
 }

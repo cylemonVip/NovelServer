@@ -108,6 +108,10 @@ router.get('/booklists', BookListController.getLists)
 // 获取书单详情
 router.get('/booklists/:id', BookListController.getListDetail)
 
+// 获取书单详情
+router.get('/booklists/tag-type', BookListController.getListDetailByTagType)
+
+
 /**
  * 用户部分
  */

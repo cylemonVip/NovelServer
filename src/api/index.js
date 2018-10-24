@@ -49,5 +49,7 @@ export const comment = {
 
 export const bookList = {
   lists: 'http://api.zhuishushenqi.com/book-list',
-  detail: 'http://api.zhuishushenqi.com/book-list' // bookId
+  detail: 'http://api.zhuishushenqi.com/book-list', // bookId
+  //获取主题书单标签列表
+  tagDetail: 'http://api.zhuishushenqi.com/book-list'
 }
