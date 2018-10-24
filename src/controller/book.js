@@ -53,6 +53,19 @@ export default {
     ctx.body = searchResult.data
   },
 
+  // 关键字补全
+  async getBookSearchAutoComplement(ctx) {
+    if (!ctx.query.keyword) {
+      ctx.throw(400, new Error('you must provide search keyword'))
+    }
+    const searchResult = await axios.get(book.bookSearchAutoComplement, {
+      params: {
+        query: ctx.query.keyword
+      }
+    })
+    ctx.body = searchResult.data
+  },
+
   // 书籍搜索
   async getBookSearchResults(ctx) {
     if (!ctx.query.keyword) {

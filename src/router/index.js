@@ -71,6 +71,9 @@ router.get('/chapters/:link', bookController.getChapterContent)
 // 获取搜索结果
 router.get('/search', bookController.getBookSearchResults)
 
+// 关键字补全
+router.get('/search-auto-complement', bookController.getBookSearchAutoComplement)
+
 // 通过tag搜索
 router.get('/search-by-tag', bookController.getBookByTagSearchResults)
 

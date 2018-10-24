@@ -21,9 +21,11 @@ export const book = {
   // 章节内容:id 单章id
   chapterContent: 'http://chapter2.zhuishushenqi.com/chapter', //id: chapter id
   // 书籍搜索 可以搜索作者但是不精确
-  bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search', //query ?query=凡人修仙传
+  bookSearch: 'http://api.zhuishushenqi.com/book/fuzzy-search', //query ?keyword=关键字
   //通过tag找列表
-  bookSearchByTag: 'http://api.zhuishushenqi.com/book/by-tags' //query ?query={tags, start, limit}
+  bookSearchByTag: 'http://api.zhuishushenqi.com/book/by-tags', //query ?{tags, start, limit}
+  //关键字补全
+  bookSearchAutoComplement: 'http://api.zhuishushenqi.com/book/auto-complete' //query ?keyword=关键字
 }
 export const rank = {
   // 排名分类
