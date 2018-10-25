@@ -13,7 +13,9 @@ export default {
   },
 
   async getListDetailByTagType (ctx) {
-    const detail = await axios.get(bookList.tagDetail)
+  	console.log("getListDetailByTagType ===== getListDetailByTagType == 1");
+    const detail = await axios.get(bookList.tagDetail);
+    console.log("getListDetailByTagType ===== getListDetailByTagType == 2");
     ctx.body = detail.data
   }
 }
