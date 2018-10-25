@@ -28,7 +28,7 @@ export default {
   },
 
   async getABlockComments (ctx) {
-    const comment = await axios.get(bookList.aBlockComment + `/${ctx.params.id}`)
+    const comment = await axios.get(comment.aBlockComment + `/${ctx.params.id}`)
     ctx.body = comment.data
   },
 }
