@@ -41,4 +41,10 @@ export default {
     const comments = await axios.get(comment.helpComment, { params: ctx.query })
     ctx.body = comments.data
   },
+
+  async getABlockHelpComments (ctx) {
+    const comments = await axios.get(comment.aHelpComment + `/${ctx.params.id}`)
+    ctx.body = comments.data
+  },
+  
 }
