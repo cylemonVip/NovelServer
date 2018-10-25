@@ -118,7 +118,7 @@ router.get('/comments-help', commentsController.getBlockHelpComments)
 router.get('/a-comments-help/:id', commentsController.getABlockHelpComments)
 
 //获取书荒区帖子详情
-router.get('/book-area-reviews', commentsController.getBookAreaReviews)
+router.get('/book-area-reviews/:id', commentsController.getBookAreaReviews)
 
 //获取书荒区帖子详情
 router.get('/book-detail-reviews/:id', commentsController.getBookDetailReviews)
