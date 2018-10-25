@@ -108,6 +108,10 @@ router.get('/comments-block', commentsController.getBlockComments)
 //获取综合讨论区帖子详情
 router.get('/a-comments/:id', commentsController.getABlockComments)
 
+//获取综合讨论区精品帖子详情
+router.get('/a-best-comments/:id', commentsController.getABestBlockComments)
+
+
 // 获取书单列表
 router.get('/booklists', BookListController.getLists)
 

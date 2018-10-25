@@ -30,5 +30,10 @@ export default {
   async getABlockComments (ctx) {
     const comments = await axios.get(comment.aBlockComment + `/${ctx.params.id}`)
     ctx.body = comments.data
+  },
+
+  async getABestBlockComments (ctx) {
+    const comments = await axios.get(comment.aBestBlockComment + `/${ctx.params.id}` + '/comment/best')
+    ctx.body = comments.data
   }
 }
