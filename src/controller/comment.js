@@ -61,4 +61,9 @@ export default {
     const comments = await axios.get(comment.bookDetailReviews + `/${ctx.params.id}` + '/comment')
     ctx.body = comments.data
   },
+
+  async getBlockDetailComments (ctx) {
+    const comments = await axios.get(comment.aBlockDetaiComment + `/${ctx.params.id}` + '/comment')
+    ctx.body = comments.data
+  },
 }
