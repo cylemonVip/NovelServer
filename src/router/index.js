@@ -111,6 +111,8 @@ router.get('/a-comments/:id', commentsController.getABlockComments)
 //获取综合讨论区精品帖子详情
 router.get('/a-best-comments/:id', commentsController.getABestBlockComments)
 
+//获取书荒区帖子列表
+router.get('/comments-help', commentsController.getBlockHelpComments)
 
 // 获取书单列表
 router.get('/booklists', BookListController.getLists)
