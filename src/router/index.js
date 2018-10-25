@@ -102,8 +102,11 @@ router.get('/book/reviews', commentsController.getBookReviews)
 // 获取热门书评
 router.get('/book/best-reviews', commentsController.getBookBestReviews)
 
-//获取综合讨论区帖子详情
+//获取综合讨论区帖子列表
 router.get('/comments-block', commentsController.getBlockComments)
+
+//获取综合讨论区帖子详情
+router.get('/a-comments/:id', commentsController.getABlockComments)
 
 // 获取书单列表
 router.get('/booklists', BookListController.getLists)

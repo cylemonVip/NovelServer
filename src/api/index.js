@@ -46,7 +46,9 @@ export const comment = {
   //热门评论
   bestReviews: 'http://api.zhuishushenqi.com/post/review/best-by-book',
   //获取综合讨论区帖子列表
-  blockReviews: 'http://api.zhuishushenqi.com/post/by-block'
+  blockReviews: 'http://api.zhuishushenqi.com/post/by-block',
+  //获取综合讨论区帖子详情
+  aBlockComment: 'http://api.zhuishushenqi.com/post'
 }
 
 export const bookList = {
