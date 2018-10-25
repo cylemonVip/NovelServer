@@ -120,6 +120,9 @@ router.get('/a-comments-help/:id', commentsController.getABlockHelpComments)
 //获取书荒区帖子详情
 router.get('/book-area-reviews', commentsController.getBookAreaReviews)
 
+//获取书荒区帖子详情
+router.get('/book-detail-reviews/:id', commentsController.getBookDetailReviews)
+
 
 // 获取书单列表
 router.get('/booklists', BookListController.getLists)

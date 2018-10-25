@@ -57,6 +57,8 @@ export const comment = {
   aHelpComment: 'http://api.zhuishushenqi.com/post/help',
   //获取书评区帖子列表
   bookAreaReviews: 'http://api.zhuishushenqi.com/post/review',
+  //获取书评区、书荒区帖子详情内的评论列表
+  bookDetailReviews: 'http://api.zhuishushenqi.com/post/review'
 }
 
 export const bookList = {

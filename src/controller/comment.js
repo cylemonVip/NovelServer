@@ -50,5 +50,10 @@ export default {
   async getBookAreaReviews (ctx) {
     const comments = await axios.get(comment.bookAreaReviews, { params: ctx.query })
     ctx.body = comments.data
-  }
+  },
+
+  async getBookDetailReviews (ctx) {
+    const comments = await axios.get(comment.bookDetailReviews + `/${ctx.params.id}` + '/comment')
+    ctx.body = comments.data
+  },
 }
